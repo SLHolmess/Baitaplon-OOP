@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label prefHeight="48.0" prefWidth="745.0" text="QUẢN LÝ NHÂN VIÊN" textFill="#ee0808">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <TabPane layoutY="47.0" prefHeight="289.0" prefWidth="745.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="         Thêm         ">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" onDragDetected="#show" prefHeight="255.0" prefWidth="745.0">
+                           <children>
+                              <Label layoutX="29.0" layoutY="14.0" text="Họ và Tên:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tenNV" layoutX="214.0" layoutY="12.0" />
+                              <Label layoutX="29.0" layoutY="59.0" text="Nhân Viên:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="29.0" layoutY="98.0" text="Số Điện Thoại:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="soDT" layoutX="214.0" layoutY="96.0" />
+                              <Label layoutX="29.0" layoutY="143.0" text="Thời Gian Trả Lương">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="thoiGianBDTL" layoutX="214.0" layoutY="141.0" />
+                              <Label layoutX="34.0" layoutY="188.0" text="Hệ Số Lương">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="heSoluong" layoutX="214.0" layoutY="186.0" />
+                              <Button fx:id="add" layoutX="214.0" layoutY="216.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="105.0" text="Thêm">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="422.0" layoutY="15.0" text="Mã NV:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="maNV" layoutX="505.0" layoutY="13.0" />
+                              <Button fx:id="initialize" layoutX="371.0" layoutY="216.0" mnemonicParsing="false" onAction="#luongTB" prefHeight="30.0" prefWidth="146.0" text="Lương Trung Bình">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Button>
+
+
+                              <Label layoutX="422.0" layoutY="53.0" prefHeight="32.0" prefWidth="111.0" text="Số giờ làm thêm:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="soGioLamThem" layoutX="550.0" layoutY="57.0" />
+                              <Label layoutX="422.0" layoutY="93.0" prefHeight="32.0" prefWidth="111.0" text="Số Lỗi Tìm Được:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="soLoiTimDuoc" layoutX="550.0" layoutY="97.0" />
+                              <Button layoutX="566.0" layoutY="216.0" mnemonicParsing="false" onAction="#thongke" text="Thống Kê Nhân Viên ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="62.0" layoutY="219.0" mnemonicParsing="false" onAction="#show" text="Hiển Thị">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <ComboBox fx:id="kieuNV" layoutX="213.0" layoutY="57.0" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="           Sửa           ">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="16.0" layoutY="43.0" text="Mã NV cần sửa">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="maNVsua" layoutX="131.0" layoutY="40.0" />
+                              <Label layoutX="16.0" layoutY="88.0" text="Tên">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tenmoi" layoutX="131.0" layoutY="85.0" />
+                              <Label layoutX="374.0" layoutY="43.0" text="SĐT">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="sdtmoi" layoutX="491.0" layoutY="40.0" />
+                              <Label layoutX="14.0" layoutY="175.0" text="Thời gian TL">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="thoigianTLmoi" layoutX="131.0" layoutY="175.0" />
+                              <Label layoutX="373.0" layoutY="88.0" text="Hệ số lương">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="hesoluongmoi" layoutX="491.0" layoutY="85.0" />
+                              <Label layoutX="373.0" layoutY="132.0" text="Số giờ làm thêm">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="373.0" layoutY="177.0" text="Số lỗi tìm được">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="sogiolamthemmoi" layoutX="491.0" layoutY="130.0" />
+                              <TextField fx:id="soloitimduocmoi" layoutX="491.0" layoutY="175.0" />
+                              <Button fx:id="sua" layoutX="305.0" layoutY="206.0" mnemonicParsing="false" onAction="#update" prefHeight="39.0" prefWidth="81.0" text="Sửa">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="14.0" layoutY="135.0" text="Nhân viên">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="kieunvmoi" layoutX="130.0" layoutY="133.0" prefWidth="150.0" />
+
+
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="            Xóa             ">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="93.0" layoutY="70.0" prefHeight="32.0" prefWidth="99.0" text="Mã Nhân Viên:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="deleteMaNV" layoutX="224.0" layoutY="74.0" />
+                              <Button fx:id="add1" layoutX="279.0" layoutY="144.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="105.0" text="Xóa">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="            Tìm Kiếm             ">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+
+                              <Button layoutX="246.0" layoutY="147.0" mnemonicParsing="false" onAction="#timkiem" prefHeight="25.0" prefWidth="105.0" text="Tìm Kiếm">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="timkiem" layoutX="335.0" layoutY="63.0" />
+                              <ComboBox fx:id="comboBox" layoutX="96.0" layoutY="63.0" prefWidth="150.0" />
+
+
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <TableView fx:id="table" layoutY="336.0" prefHeight="223.0" prefWidth="745.0">
+               <columns>
+                  <TableColumn fx:id="ma" prefWidth="75.0" text="Mã NV" />
+                  <TableColumn fx:id="ten" prefWidth="184.0" text="Họ Và Tên" />
+                  <TableColumn fx:id="phone" prefWidth="115.0" text="Số Điện Thoại" />
+                  <TableColumn fx:id="time" minWidth="0.0" prefWidth="165.0" text="Thời gian bắt đầu trả lương" />
+                  <TableColumn fx:id="hsl" minWidth="0.0" prefWidth="88.0" text="Hệ Số Lương" />
+                  <TableColumn fx:id="luongColumn" prefWidth="116.0" text="Lương" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
